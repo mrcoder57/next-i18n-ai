@@ -2,9 +2,9 @@
   "name": "next-i18n-ai",
   "version": "1.0.0",
   "description": "AI-powered translation for Next.js internationalization",
-  "main": "dist/index.js",
+  "main": "dist/index.cjs",
   "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
+  "types": "dist/index.d.ts", 
   "scripts": {
     "build": "tsup src/index.ts --dts --format esm,cjs --out-dir dist",
     "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest",
@@ -26,8 +26,7 @@
   "exports": {
     ".": {
       "import": "./dist/index.mjs",
-      "require": "./dist/index.cjs",
-      "types": "./dist/index.d.ts"
+      "require": "./dist/index.cjs"
     }
   },
   "devDependencies": {
