@@ -28,7 +28,26 @@ API_KEY=your-gemini-api-key
 
 ```
 
-## 🚀 Usage
+## Usage
+
+```javascript
+const { AIClient } = require("next-i18n-ai");
+const client = new AIClient({
+  apiKey: "your-api-key",
+  provider: "gemini",
+});
+
+async function main() {
+  const translatedText = await client.translate("Hello", "es");
+  console.log("Translated:", translatedText);
+}
+
+main().catch(console.error);
+```
+
+## Configuration
+
+Ensure you have a valid API key and provider set up for the translations to work correctly.
 
 ### Run Example Translation
 
